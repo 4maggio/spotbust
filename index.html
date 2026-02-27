@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPOTBUST — Leipzig</title>
+    <meta name="description" content="SPOTBUST — Punk aus Leipzig. Termine, Mucke, Kontakt.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Space+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- ====== NAV ====== -->
+    <nav id="nav">
+        <a href="#hero" class="nav-logo">SPOTBUST</a>
+        <div class="nav-links">
+            <a href="#gigs">GIGS</a>
+            <a href="#media">MEDIA</a>
+            <a href="#kontakt">KONTAKT</a>
+        </div>
+        <button class="burger" aria-label="Menü" id="burger">&#9776;</button>
+    </nav>
+
+    <!-- ====== HERO ====== -->
+    <section id="hero">
+        <div class="hero-inner">
+            <img src="data/svg/spotbust_fastsvg.svg" alt="Spotbust Logo" class="hero-logo">
+            <p class="hero-sub">LEIPZIG &bull; PUNK &bull; DIY</p>
+            <a href="#gigs" class="btn">NÄCHSTE SHOWS &darr;</a>
+        </div>
+    </section>
+
+    <!-- ====== GIGS ====== -->
+    <section id="gigs">
+        <h2 class="section-title">UPCOMING GIGS</h2>
+        <div id="gig-list" class="gig-list">
+            <!-- wird per JS aus gigs.json geladen -->
+            <p class="loading">Lade Termine&hellip;</p>
+        </div>
+        <p class="gig-hint">Keine Termine? Dann checkt unsere Socials — da kommt was!</p>
+    </section>
+
+    <!-- ====== MEDIA ====== -->
+    <section id="media">
+        <h2 class="section-title">MEDIA</h2>
+
+        <div class="media-grid">
+            <!-- Band Foto -->
+            <div class="media-item">
+                <img src="data/jpg/Sportbrust_screen.jpg" alt="Spotbust Band" loading="lazy">
+            </div>
+            <div class="media-item">
+                <img src="data/Spotbust_Finger_Soean/spotbustfinger-Enhanced-SR.jpg" alt="Spotbust Finger"
+                    loading="lazy">
+            </div>
+            <!-- Platzhalter -->
+            <div class="media-item placeholder">
+                <span>FOTO</span>
+            </div>
+            <div class="media-item placeholder">
+                <span>FOTO</span>
+            </div>
+        </div>
+
+        <!-- ====== INSTAGRAM EMBEDS ====== -->
+        <!--
+          SO FÜGT IHR NEUE POSTS HINZU:
+          1. Auf Instagram den Post öffnen
+          2. Auf die drei Punkte (...) klicken → "Einbetten" wählen
+          3. "Einbettungs-Code kopieren" klicken
+          4. Den kopierten Code HIER einfügen (vor dem </div> von insta-grid)
+          5. Auf GitHub committen — fertig!
+        -->
+        <div class="insta-section">
+            <h3>INSTAGRAM <a href="https://www.instagram.com/spotbust/" target="_blank" rel="noopener" class="insta-handle">@spotbust</a></h3>
+            <p class="insta-hint">Kein Insta? Kein Problem — hier seht ihr unsere letzten Posts.</p>
+
+            <div id="insta-grid" class="insta-grid">
+
+                <!-- BEISPIEL-EMBED (ersetzen mit echten Posts): -->
+                <div class="insta-embed-item">
+                    <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/spotbust/" data-instgrm-version="14" style="background:#0a0a0a; border:0; border-radius:3px; box-shadow:none; margin:0; max-width:540px; min-width:326px; padding:0; width:100%;">
+                        <div style="padding:16px;">
+                            <a href="https://www.instagram.com/spotbust/" style="color:#c6ff00; font-family:'Space Mono',monospace; font-size:14px; text-decoration:none;" target="_blank" rel="noopener">@spotbust auf Instagram ansehen</a>
+                        </div>
+                    </blockquote>
+                </div>
+
+                <!-- HIER WEITERE EMBED-CODES EINFÜGEN -->
+
+            </div>
+
+            <div class="insta-cta">
+                <a href="https://www.instagram.com/spotbust/" target="_blank" rel="noopener" class="btn btn-sm">MEHR AUF INSTAGRAM →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== KONTAKT ====== -->
+    <section id="kontakt">
+        <h2 class="section-title">KONTAKT</h2>
+        <div class="kontakt-inner">
+            <p>Booking, Fragen, Bier-Spenden?</p>
+            <a href="mailto:spotbust@herdmanns.de" class="email-link">spotbust@herdmanns.de</a>
+            <div class="social-links">
+                <a href="https://www.instagram.com/spotbust/" target="_blank" rel="noopener" title="Instagram">
+                    <svg viewBox="0 0 24 24" width="32" height="32" fill="currentColor">
+                        <path
+                            d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== FOOTER ====== -->
+    <footer>
+        <p>&copy; SPOTBUST <span id="year"></span> &mdash; Leipzig</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script async src="//www.instagram.com/embed.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+# === SPOTBUST .gitignore ===
+
+# Lokale Dokumente & Anleitungen (nicht ins Repo!)
+_local/
+
+# Quelldateien (zu groß für Git)
+*.psd
+*.ai
+*.dng
+*.raw
+*.tif
+*.tiff
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+desktop.ini
+
+# Editor
+.vscode/
+*.swp
+*.swo
+*~
+
+# Node (falls später mal gebraucht)
+node_modules/
+
+# Misc
+*.log
+*.tmp
