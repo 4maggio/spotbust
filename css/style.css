@@ -164,10 +164,9 @@ img {
     gap: 1.5rem;
 }
 
-.hero-logo {
-    width: min(80vw, 500px);
-    filter: drop-shadow(0 0 40px rgba(198, 255, 0, 0.3));
-    will-change: transform;
+.hero-logo-spacer {
+    width: min(70vw, 420px);
+    height: min(70vw, 420px);
 }
 
 .hero-sub {
@@ -183,11 +182,14 @@ img {
     position: fixed;
     z-index: 900;
     pointer-events: none;
-    width: 80px;
+    width: min(70vw, 420px);
     height: auto;
-    filter: drop-shadow(0 0 20px rgba(198, 255, 0, 0.4));
-    opacity: 0;
-    will-change: transform, opacity;
+    filter: drop-shadow(0 0 30px rgba(198, 255, 0, 0.35));
+    will-change: transform, opacity, width;
+    /* starts centered in hero — GSAP takes over */
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
 }
 
 /* ---------- BUTTON ---------- */
@@ -569,7 +571,7 @@ footer {
     }
 
     #flying-finger {
-        width: 50px;
+        width: min(55vw, 280px) !important;
     }
 
     .parallax-divider {
