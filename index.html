@@ -26,8 +26,12 @@
         <button class="burger" aria-label="Menü" id="burger">&#9776;</button>
     </nav>
 
+    <!-- ====== FLYING FINGER (follows scroll) ====== -->
+    <img id="flying-finger" src="data/Spotbust_Finger_Soean/spotbustfinger-Enhanced-SR_cont.png" alt="">
+
     <!-- ====== HERO ====== -->
     <section id="hero">
+        <div class="hero-bg"></div>
         <div class="hero-inner">
             <img src="data/svg/spotbust_fastsvg.svg" alt="Spotbust Logo" class="hero-logo">
             <p class="hero-sub">LEIPZIG &bull; PUNK &bull; DIY</p>
@@ -44,6 +48,12 @@
         </div>
         <p class="gig-hint">Keine Termine? Dann checkt unsere Socials — da kommt was!</p>
     </section>
+
+    <!-- ====== PARALLAX DIVIDER ====== -->
+    <div class="parallax-divider">
+        <img class="parallax-img" src="data/Spotbust_Finger_Soean/spotbustfinger-Enhanced-SR.jpg" alt="" loading="lazy">
+        <div class="parallax-overlay"></div>
+    </div>
 
     <!-- ====== MEDIA ====== -->
     <section id="media">
@@ -77,16 +87,21 @@
           5. Auf GitHub committen — fertig!
         -->
         <div class="insta-section">
-            <h3>INSTAGRAM <a href="https://www.instagram.com/spotbust/" target="_blank" rel="noopener" class="insta-handle">@spotbust</a></h3>
+            <h3>INSTAGRAM <a href="https://www.instagram.com/spotbust/" target="_blank" rel="noopener"
+                    class="insta-handle">@spotbust</a></h3>
             <p class="insta-hint">Kein Insta? Kein Problem — hier seht ihr unsere letzten Posts.</p>
 
             <div id="insta-grid" class="insta-grid">
 
                 <!-- BEISPIEL-EMBED (ersetzen mit echten Posts): -->
                 <div class="insta-embed-item">
-                    <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/spotbust/" data-instgrm-version="14" style="background:#0a0a0a; border:0; border-radius:3px; box-shadow:none; margin:0; max-width:540px; min-width:326px; padding:0; width:100%;">
+                    <blockquote class="instagram-media" data-instgrm-captioned
+                        data-instgrm-permalink="https://www.instagram.com/spotbust/" data-instgrm-version="14"
+                        style="background:#0a0a0a; border:0; border-radius:3px; box-shadow:none; margin:0; max-width:540px; min-width:326px; padding:0; width:100%;">
                         <div style="padding:16px;">
-                            <a href="https://www.instagram.com/spotbust/" style="color:#c6ff00; font-family:'Space Mono',monospace; font-size:14px; text-decoration:none;" target="_blank" rel="noopener">@spotbust auf Instagram ansehen</a>
+                            <a href="https://www.instagram.com/spotbust/"
+                                style="color:#c6ff00; font-family:'Space Mono',monospace; font-size:14px; text-decoration:none;"
+                                target="_blank" rel="noopener">@spotbust auf Instagram ansehen</a>
                         </div>
                     </blockquote>
                 </div>
@@ -96,7 +111,8 @@
             </div>
 
             <div class="insta-cta">
-                <a href="https://www.instagram.com/spotbust/" target="_blank" rel="noopener" class="btn btn-sm">MEHR AUF INSTAGRAM →</a>
+                <a href="https://www.instagram.com/spotbust/" target="_blank" rel="noopener" class="btn btn-sm">MEHR AUF
+                    INSTAGRAM →</a>
             </div>
         </div>
     </section>
@@ -123,7 +139,13 @@
         <p>&copy; SPOTBUST <span id="year"></span> &mdash; Leipzig</p>
     </footer>
 
+    <!-- GSAP + ScrollTrigger + MotionPath -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/MotionPathPlugin.min.js"></script>
+
     <script src="js/main.js"></script>
+    <script src="js/animations.js"></script>
     <script async src="//www.instagram.com/embed.js"></script>
 </body>
 
