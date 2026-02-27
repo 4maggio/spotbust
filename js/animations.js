@@ -219,47 +219,47 @@ function initFlyingFinger(finger) {
                 duration: 1,
             }
         )
-        // Rüber zur linken Seite (beim Media-Section)
-        .to(finger, {
-            x: 30,
-            y: () => window.innerHeight * 0.6,
-            rotation: -20,
-            duration: 2,
-            ease: 'power1.inOut',
-        })
-        // Kurzer Spin
-        .to(finger, {
-            rotation: 360 - 20,
-            duration: 0.5,
-            ease: 'power1.inOut',
-        })
-        // Rüber nach rechts unten (Kontakt)
-        .to(finger, {
-            x: () => window.innerWidth * 0.5,
-            y: () => window.innerHeight * 0.4,
-            rotation: 0,
-            duration: 2,
-            ease: 'power1.inOut',
-        })
-        // Finger zeigt auf die E-Mail
-        .to(finger, {
-            x: () => window.innerWidth * 0.5 - 40,
-            y: () => window.innerHeight * 0.5,
-            rotation: -30,
-            scale: 1.2,
-            duration: 1,
-            ease: 'power2.inOut',
-        })
-        // Und tschüss — fliegt raus
-        .to(finger, {
-            x: () => window.innerWidth + 100,
-            y: () => window.innerHeight * 0.3,
-            rotation: 45,
-            opacity: 0,
-            scale: 0.5,
-            duration: 1.5,
-            ease: 'power2.in',
-        });
+            // Rüber zur linken Seite (beim Media-Section)
+            .to(finger, {
+                x: 30,
+                y: () => window.innerHeight * 0.6,
+                rotation: -20,
+                duration: 2,
+                ease: 'power1.inOut',
+            })
+            // Kurzer Spin
+            .to(finger, {
+                rotation: 360 - 20,
+                duration: 0.5,
+                ease: 'power1.inOut',
+            })
+            // Rüber nach rechts unten (Kontakt)
+            .to(finger, {
+                x: () => window.innerWidth * 0.5,
+                y: () => window.innerHeight * 0.4,
+                rotation: 0,
+                duration: 2,
+                ease: 'power1.inOut',
+            })
+            // Finger zeigt auf die E-Mail
+            .to(finger, {
+                x: () => window.innerWidth * 0.5 - 40,
+                y: () => window.innerHeight * 0.5,
+                rotation: -30,
+                scale: 1.2,
+                duration: 1,
+                ease: 'power2.inOut',
+            })
+            // Und tschüss — fliegt raus
+            .to(finger, {
+                x: () => window.innerWidth + 100,
+                y: () => window.innerHeight * 0.3,
+                rotation: 45,
+                opacity: 0,
+                scale: 0.5,
+                duration: 1.5,
+                ease: 'power2.in',
+            });
 
         return tl;
     };
