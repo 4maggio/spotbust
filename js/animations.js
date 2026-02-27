@@ -148,24 +148,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function initFlyingFinger(finger) {
 
-    // Finger startet groß und zentriert im Hero (CSS setzt initial left:50%, top:50%)
-    // GSAP übernimmt ab hier
-
-    const heroHeight = document.getElementById('hero').offsetHeight;
-
-    // Set initial state: centered in viewport, large
+    // Set initial state: centered in viewport, 50vw
     gsap.set(finger, {
         left: '50%',
         top: '50%',
         xPercent: -50,
         yPercent: -50,
-        width: 'min(70vw, 420px)',
+        width: '50vw',
+        maxWidth: '400px',
         opacity: 1,
         rotation: 0,
         scale: 1,
     });
 
-    // ============ PHASE 1: Hero → Shrink while scrolling out of hero ============
+    // ============ MASTER TIMELINE — scroll-coupled ============
     const masterTl = gsap.timeline({
         scrollTrigger: {
             trigger: '#hero',
@@ -173,78 +169,76 @@ function initFlyingFinger(finger) {
             end: 'bottom top',
             endTrigger: 'footer',
             scrub: 1.2,
-            // pin: false,
         }
     });
 
-    // Finger shrinks from hero-size to small traveling size
+    // Phase 1: Shrink from hero-size, drift slightly right
     masterTl.to(finger, {
-        width: '80px',
-        left: '80%',
+        width: '70px',
+        maxWidth: 'none',
+        left: '60%',
         top: '40%',
-        rotation: -15,
+        rotation: -8,
         ease: 'power2.inOut',
         duration: 3,
     })
 
-    // ============ PHASE 2: Travel alongside content ============
-    // Drift to the right side while passing gigs
+    // Phase 2: Gentle drift right while passing gigs
     .to(finger, {
-        left: '85%',
-        top: '35%',
-        rotation: 10,
+        left: '65%',
+        top: '38%',
+        rotation: 5,
         duration: 2,
         ease: 'power1.inOut',
     })
 
-    // Swing over to the left (during media section)
+    // Subtle move toward left-center (media section)
     .to(finger, {
-        left: '10%',
-        top: '60%',
-        rotation: -25,
+        left: '38%',
+        top: '50%',
+        rotation: -10,
         duration: 3,
         ease: 'power1.inOut',
     })
 
-    // Little spin
+    // Small lazy rotation
     .to(finger, {
-        rotation: 335,
-        duration: 1,
+        rotation: 350,
+        duration: 1.5,
         ease: 'power1.inOut',
     })
 
-    // ============ PHASE 3: Settle bottom center ============
-    // Move toward center-bottom (kontakt area)
+    // Phase 3: Settle back to center (kontakt)
     .to(finger, {
         left: '50%',
         top: '50%',
         rotation: 0,
-        width: '100px',
-        scale: 1.15,
+        width: '90px',
+        scale: 1.1,
         duration: 3,
         ease: 'power2.inOut',
     })
 
-    // Final position: pointing at email, slightly larger
+    // Point at email
     .to(finger, {
-        rotation: -30,
-        scale: 1.3,
+        rotation: -20,
+        scale: 1.2,
         duration: 1,
         ease: 'power2.inOut',
     })
 
-    // Fly off screen
+    // Fade out gently
     .to(finger, {
-        left: '110%',
-        top: '30%',
-        rotation: 45,
+        left: '55%',
+        top: '40%',
+        rotation: 10,
         opacity: 0,
-        scale: 0.5,
+        scale: 0.7,
         duration: 2,
         ease: 'power2.in',
     });
 
-    // Bei Resize neu berechnen
+    // Resize handler
     let resizeTimer;
     window.addEventListener('resize', () => {
         clearTimeout(resizeTimer);

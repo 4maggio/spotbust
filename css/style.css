@@ -165,8 +165,10 @@ img {
 }
 
 .hero-logo-spacer {
-    width: min(70vw, 420px);
-    height: min(70vw, 420px);
+    width: 50vw;
+    max-width: 400px;
+    height: 50vw;
+    max-height: 400px;
 }
 
 .hero-sub {
@@ -182,7 +184,8 @@ img {
     position: fixed;
     z-index: 900;
     pointer-events: none;
-    width: min(70vw, 420px);
+    width: 50vw;
+    max-width: 400px;
     height: auto;
     filter: drop-shadow(0 0 30px rgba(198, 255, 0, 0.35));
     will-change: transform, opacity, width;
